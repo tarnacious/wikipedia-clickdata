@@ -3,7 +3,7 @@ Download the wikipedia click data.
 Crawl for links and MD5 hashes
 
     $ mkdir data
-    $ python crawl_links.py > data/files.txt
+    $ python crawl_links.py > data/links.txt
 
 Around 47,000 lines sounds right (since 2007/12)
 
@@ -33,4 +33,4 @@ For a day. ~2.2GB
 Download at days worth of data.
 
     $ mkdir archive
-    $ grep "pagecounts-20130201-2" data/links.txt | sh fetch.sh archive
+    $ grep "pagecounts-20130201-2" data/links.txt | bash fetch.sh archive

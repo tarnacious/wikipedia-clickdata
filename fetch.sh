@@ -1,9 +1,11 @@
+#!/bin/bash
+
 # params: file, md5
 function compare_md5() {
     if [ ! -f "$1" ]; then
         return
     fi
-    calculated_md5=$(md5 "$1" | cut -f 2 -d "=" | cut -c2-)
+    calculated_md5=$(md5sum "$1" | cut -c1-32)
     if [ "$2" == "$calculated_md5" ]; then
         echo "valid"
     fi
