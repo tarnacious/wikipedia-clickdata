@@ -23,5 +23,15 @@ def get_bulk_index_lines(page_title, clicks, timestamp_str, categories=None):
 
     return "\n".join(index_lines)
 
-print get_bulk_index_lines("cool%5D", 78, "pagecounts-20120114-230000",
-    categories=["bla", "blub"])
+
+#
+#print get_bulk_index_lines("cool%5D", 78, "pagecounts-20120114-230000",
+#    categories=["bla", "blub"])
+
+if __name__ == '__main__':
+    import sys
+    try:
+        print get_bulk_index_lines(sys.argv[2], sys.argv[0], sys.argv[1])
+    except:
+        print >> sys.stderr, "Error processing: %s" % sys.argv
+
