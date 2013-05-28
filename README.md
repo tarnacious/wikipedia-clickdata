@@ -34,3 +34,10 @@ Download at days worth of data.
 
     $ mkdir archive
     $ grep "pagecounts-20130201-2" data/links.txt | bash fetch.sh archive
+
+## Indexes
+
+Create an index
+
+    curl -XPUT 'http://localhost:9200/clickdata/' -d @./index.json
+
