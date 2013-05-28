@@ -30,8 +30,9 @@ def get_bulk_index_lines(page_title, clicks, timestamp_str, categories=None):
 
 if __name__ == '__main__':
     import sys
+
     try:
-        print get_bulk_index_lines(sys.argv[2], sys.argv[0], sys.argv[1])
+        print get_bulk_index_lines(sys.argv[2], sys.argv[3], sys.argv[1])
     except:
         print >> sys.stderr, "Error processing: %s" % sys.argv
 
